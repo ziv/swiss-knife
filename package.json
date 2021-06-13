@@ -1,0 +1,79 @@
+{
+  "name": "swiss-knife",
+  "version": "0.0.0",
+  "description": "My utilities collection",
+  "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "tsc",
+    "format": "eslint --fix src/*.ts && prettier --write src/*.ts",
+    "test": "jest",
+    "test:cover": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziv/swiss-knife.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziv/swiss-knife/issues"
+  },
+  "homepage": "https://github.com/ziv/swiss-knife#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.3",
+    "@semantic-release/npm": "^7.1.3",
+    "@semantic-release/release-notes-generator": "^9.0.3",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3",
+    "tslib": "^2.3.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "tsconfig.json",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "root": true,
+    "env": {
+      "node": true,
+      "jest": true
+    },
+    "ignorePatterns": [
+      "lib/*.*"
+    ]
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  }
+}

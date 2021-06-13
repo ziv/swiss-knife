@@ -11,4 +11,8 @@ describe('https', () => {
     it('should get https url', async () => {
         expect(await https.get(url)).toBeTruthy();
     });
+
+    it('should post https url', async () => {
+        expect(await https.post(url, 'data')).toBeTruthy();
+    });
 });
