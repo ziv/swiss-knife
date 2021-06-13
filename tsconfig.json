@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "incremental": true,
     "lib": [
       "DOM",
+      "es2019",
+      "es2020",
       "esnext"
     ],
     "declaration": true,
