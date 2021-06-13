@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ziv/swiss-knife/compare/v1.0.0...v1.1.0) (2021-06-13)
+
+
+### Features
+
+* changed to scoped name @xpr/swiss-knife ([c7ba94a](https://github.com/ziv/swiss-knife/commit/c7ba94ab43819a18a5245910f25dda5aee0d8871))
+
 # 1.0.0 (2021-06-13)
 
 
