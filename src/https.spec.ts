@@ -1,6 +1,7 @@
 import https from './https';
 
 // todo replace with test server
+// todo or use stream as mock
 const url = 'https://www.google.com';
 
 describe('https', () => {
