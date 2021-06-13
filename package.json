@@ -19,6 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/ziv/swiss-knife.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Ziv",
   "license": "MIT",
   "bugs": {
