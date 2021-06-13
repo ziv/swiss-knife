@@ -19,8 +19,8 @@
     "type": "git",
     "url": "git+https://github.com/ziv/swiss-knife.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ziv",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ziv/swiss-knife/issues"
   },
