@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ziv/swiss-knife/compare/v1.1.0...v1.1.1) (2021-06-13)
+
+
+### Bug Fixes
+
+* publish config ([580c70a](https://github.com/ziv/swiss-knife/commit/580c70a317f976af8a215e66583d06184867ed8f))
+
 # [1.1.0](https://github.com/ziv/swiss-knife/compare/v1.0.0...v1.1.0) (2021-06-13)
 
 
