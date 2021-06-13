@@ -5,15 +5,15 @@ import https from './https';
 const url = 'https://www.google.com';
 
 describe('https', () => {
-    it('should request https url', async () => {
-        expect(await https(url)).toBeTruthy();
-    });
+  it('should request https url', async () => {
+    expect(await https(url)).toBeTruthy();
+  });
 
-    it('should get https url', async () => {
-        expect(await https.get(url)).toBeTruthy();
-    });
+  it('should get https url', async () => {
+    expect(await https.get(url)).toBeTruthy();
+  });
 
-    it('should post https url', async () => {
-        expect(await https.post(url, 'data')).toBeTruthy();
-    });
+  it('should post https url', async () => {
+    expect(await https.post(url, 'data')).toBeTruthy();
+  });
 });
