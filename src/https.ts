@@ -1,6 +1,10 @@
 import { RequestOptions, request } from 'https';
 
-function https(url: string, options: RequestOptions = {}, data?: string): Promise<string> {
+function https(
+  url: string,
+  options: RequestOptions = {},
+  data?: string
+): Promise<string> {
   return new Promise((resolve, reject) => {
     let body = '';
 
