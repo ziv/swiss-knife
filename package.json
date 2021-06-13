@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "description": "My utilities collection",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc",
     "format": "eslint --fix src/*.ts && prettier --write src/*.ts",
     "test": "jest",
-    "test:cover": "jest --coverage"
+    "test:cover": "jest --coverage",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
