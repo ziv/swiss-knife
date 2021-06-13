@@ -1,8 +1,14 @@
 import https from './https';
 
+// todo replace with test server
+const url = 'https://www.google.com';
+
 describe('https', () => {
+    it('should request https url', async () => {
+        expect(await https(url)).toBeTruthy();
+    });
+
     it('should get https url', async () => {
-        const res = https.get('https://www.google.com');
-        console.log(res);
+        expect(await https.get(url)).toBeTruthy();
     });
 });
