@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/ziv/swiss-knife/compare/v1.1.1...v1.1.2) (2021-06-14)
+
+
+### Bug Fixes
+
+* tsconfig fixed to enable build ([8ac4e63](https://github.com/ziv/swiss-knife/commit/8ac4e632b5efa046536f584a9089d3b2d0841ddc))
+
 ## [1.1.1](https://github.com/ziv/swiss-knife/compare/v1.1.0...v1.1.1) (2021-06-13)
 
 
