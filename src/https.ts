@@ -1,37 +1,24 @@
-import { RequestOptions, request } from 'https';
+import {RequestOptions, request} from 'https';
+import stream from './stream';
 
-function https(
-  url: string,
-  options: RequestOptions = {},
-  data?: string
-): Promise<string> {
-  return new Promise((resolve, reject) => {
-    let body = '';
-
-    if (data) {
-      options.headers = {
-        ...options.headers,
-        'Content-Length': data.length
-      };
-    }
-
-    const req = request(url, options, res => {
-      res.on('data', chunk => (body += chunk));
-      res.on('end', () => resolve(body));
+/**
+ * Raw HTTPS client
+ *
+ * @param url
+ * @param opts
+ * @param data
+ */
+export default function https(url: string, opts: RequestOptions = {}, data?: string): Promise<Buffer> {
+    return new Promise((resolve, reject) => {
+        // create request & stream response
+        const req = request(url, opts, res => stream(res).then(resolve));
+        // error handler
+        req.on('error', reject);
+        // if there is a data, write it
+        if (data) {
+            req.write(data);
+        }
+        // finalize
+        req.end();
     });
-
-    req.on('error', reject);
-    if (data) {
-      req.write(data);
-    }
-    req.end();
-  });
 }
-
-https.get = (url: string, options: RequestOptions = {}) =>
-  https(url, { ...options, method: 'GET' });
-
-https.post = (url: string, data: string, options: RequestOptions = {}) =>
-  https(url, { ...options, method: 'POST' }, data);
-
-export default https;
