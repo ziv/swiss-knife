@@ -6,3 +6,9 @@ A collection of `Typescript`/`Node` utils.
 ```shell
 npm i @xpr/swiss-knife
 ```
+
+## https
+Raw `HTTPS` promise client.
+
+## stream
+Raw read stream to promise.
