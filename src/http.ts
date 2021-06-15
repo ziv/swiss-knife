@@ -10,7 +10,7 @@ export interface HttpOptions {
 const defaultOpts = {
   root: process.cwd(),
   port: 8080,
-  hostname: 'localhost'
+  hostname: '0.0.0.0'
 };
 
 export default function http(opts: Partial<HttpOptions> = {}) {

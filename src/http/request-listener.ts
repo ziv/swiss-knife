@@ -1,25 +1,27 @@
 import {IncomingMessage, ServerResponse} from 'http';
 import {resolve} from 'path';
 import {statSync} from 'fs';
+import trimLeft from '../strings/trim-left';
 import directory from './directory';
+import file from './file';
+
+const trimSlash = trimLeft('/');
 
 export const requestListener = (root: string) => (req: IncomingMessage, res: ServerResponse) => {
-    const url = req.url  || '';
-    const relative = '/' === url ? '' : url;
+    const relative = trimSlash(req.url as string);
     const absolute = resolve(root, relative);
-    console.log({root, relative, absolute})
-    // if no absolute or error, can't retrieve data about the path
-    const stat = statSync(absolute);
-    // if no stat, the path not exists
 
-    if (stat.isDirectory()) {
-        // send right headers and output
-        // handle directory display
-        res.end(directory(root));
-        return;
-    } else {
-        // send fine to browser
-        res.end(root);
-        return;
+    console.log({relative, absolute})
+    try {
+        (statSync(absolute).isDirectory() ? directory(absolute, relative) : file(absolute)).pipe(res);
+    } catch (e) {
+        if (e.path && e.path.endsWith('favicon.ico')) {
+            // ignore error
+        } else {
+            // todo handle errors
+            console.log(e);
+        }
+        res.statusCode = 404;
+        res.end();
     }
 };
