@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/ziv/swiss-knife/compare/v1.2.0...v1.3.0) (2021-06-15)
+
+
+### Features
+
+* strings, stream, http ([607d91d](https://github.com/ziv/swiss-knife/commit/607d91d8815239b42fb4fbfa38360c57066ecf19))
+* **fs:** ls, describe ([b0cdc3d](https://github.com/ziv/swiss-knife/commit/b0cdc3dba67d227c9001fe651f4dd6a44422e3ec))
+
 # [1.2.0](https://github.com/ziv/swiss-knife/compare/v1.1.2...v1.2.0) (2021-06-14)
 
 
