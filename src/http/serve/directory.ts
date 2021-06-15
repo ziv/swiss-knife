@@ -1,11 +1,11 @@
-import {fromString} from '../streams';
-import {ls} from '../fs';
-import {trimRight} from '../strings';
+import {fromString} from '../../streams';
+import {ls} from '../../fs';
+import {trimRight} from '../../strings';
 
 const trimSlash = trimRight('/');
 
 const html = (path: string, items: string) => {
-    const up = path ? `           <a href="/${trimSlash(path)}/../">UP</a>\n` : ''
+    const up = path ? `           <a href="/${trimSlash(path)}/../">UP</a>\n` : '';
     return `
 <!doctype html>
 <html lang="en">

@@ -1,5 +1,5 @@
 import { RequestOptions, request } from 'https';
-import stream from './stream';
+import {toPromise} from '../streams';
 
 /**
  * Raw HTTPS client
@@ -15,7 +15,7 @@ export default function https(
 ): Promise<Buffer> {
   return new Promise((resolve, reject) => {
     // create request & stream response
-    const req = request(url, opts, res => stream(res).then(resolve));
+    const req = request(url, opts, res => toPromise(res).then(resolve));
     // error handler
     req.on('error', reject);
     // if there is a data, write it
