@@ -1,33 +1,30 @@
-import {fromString} from '../../streams';
-import {ls} from '../../fs';
-import {trimRight} from '../../strings';
+import { fromString } from '../../streams';
+import ls from '../../fs/ls';
 
-const trimSlash = trimRight('/');
-
-const html = (path: string, items: string) => {
-    const up = path ? `           <a href="/${trimSlash(path)}/../">UP</a>\n` : '';
-    return `
+export const template = (path: string, items: string) => `
 <!doctype html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Index of /${path}</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <title>Index of ${path || '/'}</title>
     </head>
     <body>
-        <h1>Index of /${path}</h1>
-        <pre>${up}${items}</pre>
+        <pre>
+<!-- start -->
+<h1>Index of ${path || '/'}</h1>
+${path ? `           <a href='/${path}/..'>UP</a>` : ''}
+${items}
+<!-- end -->
+      </pre>
     </body>
 </html>`;
-}
 
-const liner = (relative: string) => (item) => {
-    const {name, perms} = item;
-    const href = (relative ? `/${relative}` : '') + (name ? `/${name}` : '');
-    return `${perms} <a href="${href}">${name}</a>`;
-}
 
-export default function directory(root: string, relative: string) {
-    const items = ls(`${root}/*`).map(liner(relative)).join('\n');
-    return fromString(html(relative, items));
+export default function directory(root: string, url: string) {
+  const path = url ? `/${url}` : url;
+  const list = ls(`${root}/*`)
+    .map(({ name, perms }) => `${perms} <a href='${path}/${name}'>${name}</a>`)
+    .join('\n');
+  return fromString(template(url, list));
 }

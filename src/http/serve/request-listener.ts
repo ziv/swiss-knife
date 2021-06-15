@@ -1,29 +1,37 @@
-import {IncomingMessage, ServerResponse} from 'http';
-import {resolve} from 'path';
-import {statSync} from 'fs';
-import trimLeft from '../../strings/trim-left';
+import { IncomingMessage, ServerResponse } from 'http';
+import { resolve } from 'path';
+import { stat } from 'fs/promises';
+import trim from '../../strings/trim';
 import directory from './directory';
 import file from './file';
 
-const trimSlash = trimLeft('/');
+const trimSlashes = trim('/');
 
-export default function requestListener(root: string) {
-    return (req: IncomingMessage, res: ServerResponse) => {
-        const relative = trimSlash(req.url as string);
-        const absolute = resolve(root, relative);
+/**
+ * HTTP static handler
+ * @param root
+ * @param logger
+ */
+export default function requestListener(root: string, logger: Console) {
+  return async (req: IncomingMessage, res: ServerResponse) => {
+    const { method, url } = req;
+    const trimmed = trimSlashes(url as string);
+    const absolute = resolve(root, trimmed);
 
-        console.log({relative, absolute})
-        try {
-            (statSync(absolute).isDirectory() ? directory(absolute, relative) : file(absolute)).pipe(res);
-        } catch (e) {
-            if (e.path && e.path.endsWith('favicon.ico')) {
-                // ignore error
-            } else {
-                // todo handle errors
-                console.log(e);
-            }
-            res.statusCode = 404;
-            res.end();
+    logger.log({ type: 'access', method, url, absolute, ts: Date.now() });
+
+    await stat(absolute)
+      .then(s => s.isDirectory() ? directory(absolute, trimmed) : file(absolute))
+      .then(s => s.pipe(res))
+      .catch(e => {
+        // todo improve error handling
+        if (e.path && e.path.endsWith('favicon.ico')) {
+          logger.log('Favicon not found');
+        } else {
+          logger.log('Error', e);
         }
-    };
+        res.statusCode = 404;
+        res.end();
+      });
+  };
 }
