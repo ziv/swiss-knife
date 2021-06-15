@@ -1,7 +1,7 @@
 import {sync as glob} from 'glob';
 import {statSync} from 'fs';
 import {basename} from 'path';
-import {describe} from './stat';
+import {describe} from './describe';
 
 export default function ls(globalPath: string) {
     return glob(globalPath)

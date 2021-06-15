@@ -11,7 +11,6 @@ const {
     S_IWOTH,
     S_IXOTH,
     S_IFDIR,
-    S_IFMT,
     S_IFREG,
     S_IFCHR,
     S_IFBLK,
@@ -19,12 +18,6 @@ const {
     S_IFLNK,
     S_IFSOCK
 } = constants;
-
-const modes: number[][] = [
-    [S_IRUSR, S_IWUSR, S_IXUSR], // owner
-    [S_IRGRP, S_IWGRP, S_IXGRP], // group
-    [S_IROTH, S_IWOTH, S_IXOTH]  // other
-];
 
 const MODES: number[] = [
     S_IRUSR, S_IWUSR, S_IXUSR, // owner
@@ -41,7 +34,7 @@ const TYPES: [number, string][] = [
     [S_IFCHR, 'c'],
 ];
 
-export const describe = ({mode}: Stats) => {
+export default function describe({mode}: Stats) {
     const [, type] = TYPES.find(([t]) => t & mode) || [0, '.'];
     const modes = MODES.map((m, i) => m & mode ? 'rwxrwxrwx'[i] : '-');
     return type + modes.join('');
