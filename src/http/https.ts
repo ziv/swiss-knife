@@ -1,5 +1,5 @@
 import { RequestOptions, request } from 'https';
-import {toPromise} from '../streams';
+import { toPromise } from '../streams';
 
 /**
  * Raw HTTPS client

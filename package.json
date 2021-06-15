@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "rm -rf lib",
     "build": "tsc",
-    "format": "eslint --fix src/*.ts && prettier --write src/*.ts",
+    "format": "eslint --fix src/**/*.ts && prettier --write src/**/*.ts",
     "lint": "eslint",
     "test": "jest",
     "test:cover": "jest --coverage",
