@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/ziv/swiss-knife/compare/v1.3.0...v1.4.0) (2021-07-06)
+
+
+### Features
+
+* compose function ([1215800](https://github.com/ziv/swiss-knife/commit/12158005bfd070e5513ee0542747fcae7223875b))
+
 # [1.3.0](https://github.com/ziv/swiss-knife/compare/v1.2.0...v1.3.0) (2021-06-15)
 
 
