@@ -1,19 +1,9 @@
-import https from './https';
-
-// todo replace with test server
-// todo or use stream as mock
-const url = 'https://www.google.com';
+jest.mock('https');
+import https from '@sk/http/https';
 
 describe('https', () => {
   it('should request https url', async () => {
-    expect(await https(url)).toBeTruthy();
+    const buffer = await https('https://fake-url');
+    expect(buffer.toString()).toEqual('https://fake-url');
   });
-
-  // it('should get https url', async () => {
-  //   expect(await https.get(url)).toBeTruthy();
-  // });
-  //
-  // it('should post https url', async () => {
-  //   expect(await https.post(url, 'data')).toBeTruthy();
-  // });
 });

@@ -1,28 +1,17 @@
 import { RequestOptions, request } from 'https';
-import { toPromise } from '../streams';
+import toPromise from '@sk/streams/to-promise';
 
-/**
- * Raw HTTPS client
- *
- * @param url
- * @param opts
- * @param data
- */
 export default function https(
   url: string,
   opts: RequestOptions = {},
-  data?: string
+  data?: Buffer | string
 ): Promise<Buffer> {
   return new Promise((resolve, reject) => {
-    // create request & stream response
     const req = request(url, opts, res => toPromise(res).then(resolve));
-    // error handler
     req.on('error', reject);
-    // if there is a data, write it
     if (data) {
       req.write(data);
     }
-    // finalize
     req.end();
   });
 }

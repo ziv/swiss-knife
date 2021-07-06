@@ -20,9 +20,16 @@
     "types": [
       "node",
       "jest"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@xpr/swiss-knife/*": ["*"],
+      "@sk/*": ["*"],
+    }
   },
   "exclude": [
-    "tmp"
+    "tmp",
+    "__mocks__",
+    "**/*.spec.ts"
   ]
 }
