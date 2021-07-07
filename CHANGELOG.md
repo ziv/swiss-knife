@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/ziv/swiss-knife/compare/v1.4.2...v1.4.3) (2021-07-07)
+
+
+### Bug Fixes
+
+* remove publish script ([d27e88f](https://github.com/ziv/swiss-knife/commit/d27e88f6cc7a026dec532a72ca893f9b5274727c))
+
 ## [1.4.2](https://github.com/ziv/swiss-knife/compare/v1.4.1...v1.4.2) (2021-07-07)
 
 
