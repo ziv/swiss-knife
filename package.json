@@ -103,9 +103,5 @@
     "bracketSpacing": true,
     "trailingComma": "none",
     "arrowParens": "avoid"
-  },
-  "dependencies": {
-    "glob": "^7.1.7",
-    "mime-types": "^2.1.31"
   }
 }
