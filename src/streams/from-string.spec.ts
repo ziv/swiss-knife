@@ -1,4 +1,4 @@
-import fromString from '@sk/streams/from-string';
+import fromString from '@/streams/from-string';
 
 describe('fromString', () => {
   it('should create readable stream from string', done => {

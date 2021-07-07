@@ -1,4 +1,4 @@
-import compose from '@sk/fp/compose';
+import compose from '@/fp/compose';
 
 const inc = x => x + 1;
 const square = x => x * x;

@@ -1,4 +1,4 @@
-import trimLeft from '@sk/strings/trim-left';
+import trimLeft from '@/strings/trim-left';
 
 describe('trimLeft', () => {
   it('should create a function', () => {

@@ -23,8 +23,7 @@
     ],
     "baseUrl": "src",
     "paths": {
-      "@xpr/swiss-knife/*": ["*"],
-      "@sk/*": ["*"],
+      "@/*": ["*"],
     }
   },
   "exclude": [

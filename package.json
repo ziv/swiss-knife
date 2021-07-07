@@ -67,7 +67,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "moduleNameMapper": {
-      "@sk/(.*)": "<rootDir>/src/$1"
+      "@/(.*)": "<rootDir>/src/$1"
     },
     "testPathIgnorePatterns": [
       "<rootDir>/lib/",

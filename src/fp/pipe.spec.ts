@@ -1,4 +1,4 @@
-import pipe from '@sk/fp/pipe';
+import pipe from '@/fp/pipe';
 
 const inc = x => x + 1;
 const square = x => x * x;

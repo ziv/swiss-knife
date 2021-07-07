@@ -1,5 +1,5 @@
 import { RequestOptions, request } from 'https';
-import toPromise from '@sk/streams/to-promise';
+import toPromise from '@/streams/to-promise';
 
 export default function https(
   url: string,

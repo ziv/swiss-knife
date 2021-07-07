@@ -1,5 +1,5 @@
-import toPromise from '@sk/streams/to-promise';
-import fromString from '@sk/streams/from-string';
+import toPromise from '@/streams/to-promise';
+import fromString from '@/streams/from-string';
 import { Readable } from 'stream';
 
 describe('toPromise', () => {
