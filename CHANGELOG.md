@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/ziv/swiss-knife/compare/v1.4.1...v1.4.2) (2021-07-07)
+
+
+### Bug Fixes
+
+* build + remove scripts ([0faa465](https://github.com/ziv/swiss-knife/commit/0faa4656ba30a4fb8665be2fec355d9fb69fbb41))
+
 ## [1.4.1](https://github.com/ziv/swiss-knife/compare/v1.4.0...v1.4.1) (2021-07-07)
 
 
