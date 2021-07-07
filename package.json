@@ -9,8 +9,7 @@
     "postbuild": "cp package*.json lib/.",
     "format": "eslint --fix src/**/*.ts && prettier --write src/**/*.ts",
     "lint": "eslint",
-    "test": "jest --coverage",
-    "publish": "npm publish lib"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
