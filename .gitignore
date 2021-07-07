@@ -1,7 +1,12 @@
 node_modules
 coverage
 lib
+dist
 tmp
 .idea
 .npmrc
 tsconfig.tsbuildinfo
+scripts/*.js
+scripts/*.d.ts
+__mocks__/*.js
+__mocks__/*.d.ts

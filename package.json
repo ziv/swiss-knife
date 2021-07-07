@@ -8,11 +8,12 @@
   ],
   "scripts": {
     "prebuild": "rm -rf lib",
-    "build": "tsc",
+    "build": "tsc --build tsconfig.build.json",
     "format": "eslint --fix src/**/*.ts && prettier --write src/**/*.ts",
     "lint": "eslint",
     "test": "jest --coverage",
-    "prepare": "npm run build"
+    "prepare": "cp package*.json lib/.",
+    "publish": "npm publish lib"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "glob": "^7.1.7",
     "jest": "^27.0.4",
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.3",
