@@ -15,21 +15,24 @@ npm i @xpr/swiss-knife
 ```
 
 ## Some more words for tech-ies
+* async
+  * [defer](src/async/defer.md)
 * fp
-    * [compose](src/fp/compose.md)
-    * [curry](src/fp/curry.ts)
-    * [pipe](src/fp/pipe.md)
+  * [compose](src/fp/compose.md)
+  * [curry](src/fp/curry.md)
+  * [pipe](src/fp/pipe.md)
 * http
-    * [https](src/http/https.md)
+  * [https](src/http/https.md)
 * process
-    * [error-handler](src/process/error-handler.md)
+  * [error-handler](src/process/error-handler.md)
 * streams
-    * [from-string](src/streams/from-string.md)
-    * [to-promise](src/streams/from-string.md)
+  * [from-string](src/streams/from-string.md)
+  * [to-promise](src/streams/from-string.md)
 * strings
-    * [trim-left](src/strings/trim-left.ts)
-    * [trim-right](src/strings/trim-right.ts)
-
+  * [trim-left](src/strings/trim-left.ts)
+  * [trim-right](src/strings/trim-right.ts)
+* time
+  * [timer](src/time/timer.md)
 
 ---
 
