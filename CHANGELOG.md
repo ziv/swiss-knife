@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/ziv/swiss-knife/compare/v1.6.0...v1.7.0) (2021-07-08)
+
+
+### Features
+
+* defer ([371302b](https://github.com/ziv/swiss-knife/commit/371302bc4ef6219d6001f33890743668b79e1ff0))
+* sleep ([c889983](https://github.com/ziv/swiss-knife/commit/c889983ac2a32818cdac4addaf73a4c7605b17aa))
+* timer ([179a4d2](https://github.com/ziv/swiss-knife/commit/179a4d26a1b5b5f52eb867977fcde05bf43e4d3b))
+
 # [1.6.0](https://github.com/ziv/swiss-knife/compare/v1.5.0...v1.6.0) (2021-07-08)
 
 
