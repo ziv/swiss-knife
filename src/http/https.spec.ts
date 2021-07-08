@@ -11,5 +11,5 @@ describe('https', () => {
     const payload = Buffer.from('test');
     const buffer = await https('https://fake-url', {}, payload);
     expect(buffer.toString()).toEqual('https://fake-url');
-  })
+  });
 });

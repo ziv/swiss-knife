@@ -20,4 +20,11 @@ describe('fromString', () => {
       done();
     });
   });
+
+  it('should not re-write written string', () => {
+    const stream = fromString('test');
+    expect(stream.read().toString()).toEqual('test');
+    expect(stream.read()).toEqual(null);
+    expect(stream.read()).toEqual(null);
+  });
 });

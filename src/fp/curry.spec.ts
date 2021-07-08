@@ -3,7 +3,10 @@ import curry from '@/fp/curry';
 const concat = (a: string, b: string, c: string) => `${a}${b}${c}`;
 
 describe('curry', () => {
-  const a = 'a', b = 'b', c = 'c', expected = 'abc';
+  const a = 'a',
+    b = 'b',
+    c = 'c',
+    expected = 'abc';
   const curried = curry(concat);
 
   it('should create a function', () => {
@@ -19,14 +22,17 @@ describe('curry', () => {
   });
 
   it('should return "abc" for (a, b)(c)', () => {
+    // @ts-ignore
     expect(curried(a, b)(c)).toEqual(expected);
   });
 
   it('should return "abc" for (a)(b, c)', () => {
+    // @ts-ignore
     expect(curried(a)(b, c)).toEqual(expected);
   });
 
   it('should return "abc" for (a)(b)(c)', () => {
+    // @ts-ignore
     expect(curried(a)(b)(c)).toEqual(expected);
   });
 });

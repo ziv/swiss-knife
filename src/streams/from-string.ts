@@ -1,13 +1,16 @@
 import { Readable } from 'stream';
 
-export default function fromString(str: string, encoding: BufferEncoding = 'utf8'): Readable {
-  let ended = false;
+export default function fromString(
+  str: string,
+  encoding: BufferEncoding = 'utf8'
+): Readable {
+  let done = false;
   return new Readable({
     async read() {
-      if (!ended) {
+      if (!done) {
         this.push(Buffer.from(str, encoding));
         this.push(null);
-        ended = true;
+        done = true;
       }
     }
   });
