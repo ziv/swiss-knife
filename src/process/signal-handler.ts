@@ -2,7 +2,10 @@ import { GenericAsyncFunction } from '@/types/functions';
 
 export const Signals: NodeJS.Signals[] = ['SIGTERM', 'SIGINT', 'SIGUSR2'];
 
-export type SignalHandlerOptions = { signals: NodeJS.Signals[]; proc: NodeJS.Process };
+export type SignalHandlerOptions = {
+  signals: NodeJS.Signals[];
+  proc: NodeJS.Process;
+};
 
 export default function signalHandler(
   finalize: GenericAsyncFunction,

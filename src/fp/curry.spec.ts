@@ -22,17 +22,14 @@ describe('curry', () => {
   });
 
   it('should return "abc" for (a, b)(c)', () => {
-    // @ts-ignore
     expect(curried(a, b)(c)).toEqual(expected);
   });
 
   it('should return "abc" for (a)(b, c)', () => {
-    // @ts-ignore
     expect(curried(a)(b, c)).toEqual(expected);
   });
 
   it('should return "abc" for (a)(b)(c)', () => {
-    // @ts-ignore
     expect(curried(a)(b)(c)).toEqual(expected);
   });
 });

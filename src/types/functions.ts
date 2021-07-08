@@ -16,6 +16,4 @@ export type UnaryAsyncFunction<T = unknown, R = T> = (input: T) => Promise<R>;
 export type PipedFunction<T = unknown, R = T> = UnaryFunction<T, R>;
 
 // curried
-export type CurriedFunction<R = unknown> = (
-  ...args: unknown[]
-) => R | CurriedFunction<R>;
+export type CurriedFunction = (...args: unknown[]) => CurriedFunction;

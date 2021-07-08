@@ -30,7 +30,7 @@ const compose = (expectedCode: number, done: jest.DoneCallback) => {
 
 describe('error-handler', () => {
   it('should create error handler on process', () => {
-    errorHandler(async () => {});
+    errorHandler(async () => undefined);
   });
 
   it('should handle "unhandledRejection" with 0', done => {

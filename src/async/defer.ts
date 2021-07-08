@@ -5,8 +5,7 @@ export interface Defer {
   reject: UnaryFunction;
 }
 
-export interface Deferred<T> extends Promise<T>, Defer {
-}
+export interface Deferred<T> extends Promise<T>, Defer {}
 
 export default function defer<T>(): Deferred<T> {
   const proxy = {} as Defer;

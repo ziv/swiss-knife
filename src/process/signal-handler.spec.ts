@@ -3,8 +3,10 @@ import signalHandler, { Signals as signals } from '@/process/signal-handler';
 import { GenericAsyncFunction, GenericFunction } from '@/types/functions';
 
 class Proc extends EventEmitter {
-  constructor(public readonly pid: string,
-              public readonly done: GenericFunction) {
+  constructor(
+    public readonly pid: string,
+    public readonly done: GenericFunction
+  ) {
     super();
   }
 
@@ -27,7 +29,7 @@ const compose = (expectedSignal: string, done: jest.DoneCallback) => {
 
 describe('signal-handler', () => {
   it('should create error handler on process', () => {
-    signalHandler(async () => {});
+    signalHandler(async () => undefined);
   });
 
   describe.each(signals)('should handle "%s"', signal => {
