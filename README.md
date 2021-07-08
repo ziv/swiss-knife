@@ -13,6 +13,7 @@ npm i @xpr/swiss-knife
 
 * fp
     * [compose](src/fp/compose.md)
+    * [curry](src/fp/curry.ts)
     * [pipe](src/fp/pipe.md)
 * http
     * [https](src/http/https.md)

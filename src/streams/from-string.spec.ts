@@ -21,10 +21,12 @@ describe('fromString', () => {
     });
   });
 
-  it('should not re-write written string', () => {
+  it('should not re-write written string', async () => {
     const stream = fromString('test');
     expect(stream.read().toString()).toEqual('test');
-    expect(stream.read()).toEqual(null);
+    // continue to read!!!
+    await stream._read(2);
+    // everything is cool
     expect(stream.read()).toEqual(null);
   });
 });

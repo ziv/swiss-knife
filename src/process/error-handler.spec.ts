@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import errorHandler, { Errors as types } from '@/process/error-handler';
+import errorHandler, { Errors as errors } from '@/process/error-handler';
 import { GenericAsyncFunction, UnaryFunction } from '@/types/functions';
 
 class Proc extends EventEmitter {
@@ -36,28 +36,28 @@ describe('error-handler', () => {
   it('should handle "unhandledRejection" with 0', done => {
     const [finalize, proc] = compose(0, done);
 
-    errorHandler(finalize, { proc, types });
+    errorHandler(finalize, { proc, errors });
     proc.emit('unhandledRejection', 'test', getPromise());
   });
 
   it('should handle "unhandledRejection" with 1', done => {
     const [finalize, proc] = compose(1, done);
 
-    errorHandler(finalize, { proc, types });
+    errorHandler(finalize, { proc, errors });
     proc.emit('unhandledRejection', 'test', getPromise());
   });
 
   it('should handle "uncaughtException" with 0', done => {
     const [finalize, proc] = compose(0, done);
 
-    errorHandler(finalize, { proc, types });
+    errorHandler(finalize, { proc, errors });
     proc.emit('uncaughtException', new Error());
   });
 
   it('should handle "uncaughtException" with 1', done => {
     const [finalize, proc] = compose(1, done);
 
-    errorHandler(finalize, { proc, types });
+    errorHandler(finalize, { proc, errors });
     proc.emit('uncaughtException', new Error());
   });
 });
