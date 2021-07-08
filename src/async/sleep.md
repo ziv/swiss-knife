@@ -1,15 +1,10 @@
 # sleep
 
-A promise exposing its handlers.
+Async wait.
 
 ```typescript
-import defer from '@xpr/swiss-knife/assync/defer';
+import sleep from '@xpr/swiss-knife/assync/sleep';
 
-
-const promise = new Promise(resolve => {
-  resolve(true);
-});
-
-const deferred = defer();
-deferred.resolve(true);
+// halt for 2 seconds
+await sleep(2000);
 ```
