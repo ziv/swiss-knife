@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/ziv/swiss-knife/compare/v1.7.0...v1.8.0) (2021-07-08)
+
+
+### Features
+
+* parse ([885b32d](https://github.com/ziv/swiss-knife/commit/885b32d3721e6c5a846a2be46bb4ffc81e3460e7))
+
 # [1.7.0](https://github.com/ziv/swiss-knife/compare/v1.6.0...v1.7.0) (2021-07-08)
 
 
