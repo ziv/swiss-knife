@@ -6,9 +6,12 @@
 
 ## Some unrelated words
 
-![logo](assets/knife-thumb.png)
+My utilities collection.
 
-My utilities collection
+In many cases I found myself writing the same utility functions over and over again in many projects I'm working on.
+This repo is a place I'm collecting those tiny functions. 
+
+Enjoy using them :)
 
 ```shell
 npm i @xpr/swiss-knife
@@ -40,6 +43,10 @@ npm i @xpr/swiss-knife
 * types
   * [functions](src/types/functions.ts)
   * [json](src/types/json.ts)
+
+---
+
+![logo](assets/knife-thumb.png)
 
 ---
 
