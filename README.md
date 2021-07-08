@@ -16,6 +16,8 @@ npm i @xpr/swiss-knife
     * [pipe](src/fp/pipe.md)
 * http
     * [https](src/http/https.md)
+* process
+    * [error-handler](src/process/error-handler.md)
 * streams
     * [from-string](src/streams/from-string.md)
     * [to-promise](src/streams/from-string.md)
