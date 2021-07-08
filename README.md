@@ -32,6 +32,8 @@ npm i @xpr/swiss-knife
 * process
   * [error-handler](src/process/error-handler.md)
   * [signal-handler](src/process/signal-handler.md)
+* reflect
+  * [to-plain](src/reflect/to-plain.md)
 * streams
   * [from-string](src/streams/from-string.md)
   * [to-promise](src/streams/from-string.md)
