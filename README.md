@@ -35,9 +35,3 @@ npm i @xpr/swiss-knife
 
 ![xpr-swiss-knife](https://badgen.net/github/license/ziv/swiss-knife)
 
-<style>
-img[src*="#thumbnail"] {
-   width:150px;
-   height:100px;
-}
-</style>
