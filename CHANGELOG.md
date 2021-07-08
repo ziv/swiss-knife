@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ziv/swiss-knife/compare/v1.5.0...v1.6.0) (2021-07-08)
+
+
+### Features
+
+* signal-handler ([bc5fd61](https://github.com/ziv/swiss-knife/commit/bc5fd61a14240af8c6893438924946c6565afb72))
+
 # [1.5.0](https://github.com/ziv/swiss-knife/compare/v1.4.3...v1.5.0) (2021-07-08)
 
 
