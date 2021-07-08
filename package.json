@@ -1,6 +1,6 @@
 {
   "name": "@xpr/swiss-knife",
-  "version": "1.4.1",
+  "version": "1.7.0",
   "description": "My utilities collection",
   "main": "index.js",
   "scripts": {
