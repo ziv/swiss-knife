@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/ziv/swiss-knife/compare/v1.4.3...v1.5.0) (2021-07-08)
+
+
+### Features
+
+* fp/curry ([f55429f](https://github.com/ziv/swiss-knife/commit/f55429f00120e7e53e69d529a5dbfc5479154988))
+* process error-handler ([ba92329](https://github.com/ziv/swiss-knife/commit/ba92329f654ee7e9b5dd90d29b68200e981d4454))
+
 ## [1.4.3](https://github.com/ziv/swiss-knife/compare/v1.4.2...v1.4.3) (2021-07-07)
 
 
