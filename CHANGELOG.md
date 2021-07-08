@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/ziv/swiss-knife/compare/v1.8.0...v1.9.0) (2021-07-08)
+
+
+### Features
+
+* to-plain ([fc15ca7](https://github.com/ziv/swiss-knife/commit/fc15ca78a4e25a74c4a571a3304ae467a61e13c7))
+
 # [1.8.0](https://github.com/ziv/swiss-knife/compare/v1.7.0...v1.8.0) (2021-07-08)
 
 
