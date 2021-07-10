@@ -41,6 +41,7 @@ npm i @xpr/swiss-knife
   * [trim-left](src/strings/trim-left.ts)
   * [trim-right](src/strings/trim-right.ts)
 * time
+  * [now](src/time/now.md)
   * [timer](src/time/timer.md)
 * types
   * [functions](src/types/functions.ts)
