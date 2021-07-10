@@ -1,3 +1,3 @@
-export default function now() {
+export default function now(): number {
   return Math.floor(Date.now() / 1000);
 }

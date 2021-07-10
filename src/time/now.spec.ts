@@ -9,6 +9,6 @@ describe('now', () => {
     const milliseconds = Date.now();
     const seconds = now();
 
-    expect(milliseconds / 1000 | 0).toEqual(seconds);
+    expect((milliseconds / 1000) | 0).toEqual(seconds);
   });
-})
+});
