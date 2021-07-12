@@ -1,17 +1,17 @@
-import trimRight from '@/strings/trim-right';
+import trimEnd from '@/strings/trim-end';
 
 describe('trimRight', () => {
   it('should create a function', () => {
-    expect(trimRight('test')).toBeInstanceOf(Function);
+    expect(trimEnd('test')).toBeInstanceOf(Function);
   });
 
   it('should trim right all numbers (explicit)', () => {
-    const trim = trimRight('1234567890');
+    const trim = trimEnd('1234567890');
     expect(trim('02468test13579')).toEqual('02468test');
   });
 
   it('should trim right all numbers (regex)', () => {
-    const trim = trimRight('\\d');
+    const trim = trimEnd('\\d');
     expect(trim('02468test13579')).toEqual('02468test');
   });
 });

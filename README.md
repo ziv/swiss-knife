@@ -38,8 +38,8 @@ npm i @xpr/swiss-knife
   * [from-string](src/streams/from-string.md)
   * [to-promise](src/streams/from-string.md)
 * strings
-  * [trim-left](src/strings/trim-left.ts)
-  * [trim-right](src/strings/trim-right.ts)
+  * [trim-start](src/strings/trim-start.ts)
+  * [trim-end](src/strings/trim-end.ts)
 * time
   * [now](src/time/now.md)
   * [timer](src/time/timer.md)
