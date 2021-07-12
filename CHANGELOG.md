@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/ziv/swiss-knife/compare/v1.9.0...v1.10.0) (2021-07-10)
+
+
+### Features
+
+* now ([fb31c8b](https://github.com/ziv/swiss-knife/commit/fb31c8b9a81df673df0025dac4cec998e908f9af))
+
 # [1.9.0](https://github.com/ziv/swiss-knife/compare/v1.8.0...v1.9.0) (2021-07-08)
 
 
