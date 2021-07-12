@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/ziv/swiss-knife/compare/v1.10.0...v1.11.0) (2021-07-12)
+
+
+### Features
+
+* trim end/start replaces right/left ([07d1a79](https://github.com/ziv/swiss-knife/commit/07d1a79e63a21a6c76c17aaef7b4767d316b3812))
+
 # [1.10.0](https://github.com/ziv/swiss-knife/compare/v1.9.0...v1.10.0) (2021-07-10)
 
 
