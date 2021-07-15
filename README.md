@@ -11,6 +11,8 @@ My utilities collection.
 In many cases I found myself writing the same utility functions over and over again in many projects I'm working on.
 This repo is a place I'm collecting those tiny functions. 
 
+>  :exclamation: While all functions tested and works - most of them simplified for demonstration and not production ready.
+
 Enjoy using them :)
 
 ```shell
